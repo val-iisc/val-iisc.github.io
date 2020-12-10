@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Video Analytics Lab, CDS, IISc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../valweb/index.html" class="navbar-brand">Home</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="../valweb/people.html" class="navbar-brand">People</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="../valweb/research.html" class="navbar-brand">Research</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="../valweb/publications.html" class="navbar-brand">Publications</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="../valweb/contact.html" class="navbar-brand">Contact</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="../valweb/openings.html" class="navbar-brand">Openings</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+
+       <!-- Do not touch anything above this line -->
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div>
+	 <br>
+	 <br>
+	 <br>
+         <h1  align="center"> Switching Convolutional Neural Network<br/>for Crowd Counting </h1>
+         <center><h3> Deepak Babu Sam*, Shiv Surya*, R. Venkatesh Babu<br/>(* = equal contribution)</h3> 
+         <h4> Video Analytics Lab, CDS </h4>
+         <h4> Indian Institute of Science, Bangalore </h4> </center>
+	 <br>
+	 <br>
+         <!--
+	 <ol>
+		<big>
+		<li> <a href="#pdf">PDF</a></li>
+		<li> <a href="#wc">Abstract </a></li>
+                <li> <a href="#code">Code</a> </li>
+		</big>
+	 </ol>
+         -->
+	 <br>
+	 <br>
+
+	 <h2 id="pdf"> Paper </h2>
+	 <a href="./files/combined.pdf">PDF</a> 
+	 <br>
+         <h2 id="wc"> Abstract </h2>
+	<p style="text-align:justify"> We propose a novel crowd counting model that maps a
+	given crowd scene to its density. Crowd analysis is compounded by myriad of factors like inter-occlusion between
+	people due to extreme crowding, high similarity of appearance between people and background elements, and large
+	variability of camera view-points. Current state-of-the art
+	approaches tackle these factors by using multi-scale CNN
+	architectures, recurrent networks and late fusion of features
+	from multi-column CNN with different receptive fields. We
+	propose switching convolutional neural network that leverages variation of crowd density within an image to improve
+	the accuracy and localization of the predicted crowd count.
+	Patches from a grid within a crowd scene are relayed to
+	independent CNN regressors based on crowd count prediction quality of the CNN established during training. The
+	independent CNN regressors are designed to have different
+	receptive fields and a switch classifier is trained to relay the
+	crowd scene patch to the best CNN regressor. We perform
+	extensive experiments on all major crowd counting datasets
+	and evidence better performance compared to current state-
+	of-the-art methods. We provide interpretable representa-
+	tions of the multichotomy of space of crowd scene patches
+	inferred from the switch. It is observed that the switch relays an image patch to a particular CNN column based on
+	density of crowd.
+         </p>
+	 <br>
+	 <br>
+	 <img src="./files/site_cvpr.png"> </img>
+	 <br>
+	 <br>
+      <h2 id="code"> Code </h2>
+		Download the code for training and evaluation of SCNN crowd counting model <a href="https://github.com/val-iisc/crowd-counting-scnn"> HERE </a>
+     <br>
+     <br>
+     <hr>
+       <!-- Do not touch anything below this line -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">            
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootswatch.js"></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
