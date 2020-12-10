@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Academic Deadline Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+<script type="text/javascript">
+var backi= -1;
+
+// HELPER FUNCTIONS
+// x is date object
+var timeDescription = function(x) {  
+  return x.toLocaleString();
+}
+
+var timeLeftDescription = function(x) {
+   
+  var t = x.getTime();
+  if(t<0) t=0;
+  
+  var tseconds = t / 1000;
+  var seconds = Math.floor(tseconds) % 60;
+  var tminutes = tseconds / 60;
+  var minutes = Math.floor(tminutes) % 60;
+  var thours = tminutes / 60;
+  var hours = Math.floor(thours) % 24;
+  var tdays = thours / 24;
+  var days = Math.floor(tdays);
+  
+  return days + " days, " + hours + "h " + minutes + "m " + seconds + "s";
+}
+
+// DATABASE
+// Note dates are shifted by 1 for month, as they start at 0. Thanks date object in Javascript!
+var deadlines= new Array();
+
+// deadlines.push({venue: "CVPR 2016", area: "Computer Vision", deadline: new Date(2015, 10, 6, 17, 0, 0, 0)});
+// deadlines.push({venue: "ICML 2016", area: "Machine Learning/Computer Vision", deadline: new Date(2016, 1, 5, 23, 59, 0, 0)});
+// deadlines.push({venue: "UAI 2016", area: "Machine Learning/AI", deadline: new Date(2016, 02, 1, 23, 59, 0, 0)});
+// deadlines.push({venue: "ECCV 2016", area: "Computer Vision", deadline: new Date(2016, 2, 14, 23, 59, 0, 0)});
+// deadlines.push({venue: "ECML-PKDD 2016", area: "Machine Learning", deadline: new Date(2016, 3, 1, 23, 59, 0, 0)});
+// deadlines.push({venue: "ICPR 2016", area: "Computer Vision", deadline: new Date(2016, 3, 4, 23, 59, 0, 0)});
+// deadlines.push({venue: "ICCV 2016", area: "Computer Vision", deadline: new Date(2016, 5, 4, 23, 59, 0, 0), approx: true});
+// deadlines.push({venue: "BMVC 2016", area: "Computer Vision", deadline: new Date(2016, 4, 13, 23, 59, 0, 0)});
+
+// deadlines.push({venue: "NIPS 2016", area: "Machine Learning/Computer Vision", deadline: new Date(2016, 4, 20, 23, 59, 0, 0)});
+
+// deadlines.push({venue: "ACCV 2016", area: "Computer Vision", deadline: new Date(2016, 4, 27, 23, 59, 0, 0)});
+// 
+//deadlines.push({venue: "ECCV 2016 Workshops", area: "Computer Vision", deadline: new Date(2016, 6, 2, 23, 59, 0, 0)});
+
+// deadlines.push({venue: "AAAI 2017", area: "Artifical Intelligence", deadline: new Date(2016, 8, 9, 23, 59, 0, 0)});
+
+//deadlines.push({venue: "WACV 2017", area: "Computer Vision", deadline: new Date(2016, 9, 3, 23, 59, 0, 0)});
+
+//deadlines.push({venue: "AI/Stats 2017", area: "Machine Learning", deadline: new Date(2016, 9, 9, 23, 59, 0, 0), approx: true});
+
+//deadlines.push({venue: "ICLR 2017", area: "Deep Learning", deadline: new Date(2016, 10, 04, 23, 59, 0 , 0)});
+
+deadlines.push({venue: "<a href=http://cvpr2017.thecvf.com>CVPR 2017, Hawaii, USA</a>", area: "Computer Vision", deadline: new Date(2016, 10, 15, 17, 0, 0, 0)});
+
+//deadlines.push({venue: "SIGGRAPH 2017", area: "Computer Graphics", deadline: new Date(2017, 0, 20, 23, 59, 0, 0), approx: true});
+
+deadlines.push({venue: "<a href=http://www.icmr2017.ro/index.php>ACM ICMR 2017, Bucharest, Romania</a>", area: "Multimedia Retrieval", deadline: new Date(2017, 0, 27, 23, 59, 0, 0), approx: true});
+
+deadlines.push({venue: "<a href=http://ijcai-17.org>IJCAI 2017, Melbourne, Australia</a>", area: "Artificial Intelligence", deadline: new Date(2017, 1, 17, 23, 59, 0, 0)});
+
+deadlines.push({venue: "<a href=http://icml.cc/2017>ICML 2017, Syndney, Australia</a>", area: "Machine Learning", deadline: new Date(2017, 1, 24, 23, 59, 0, 0)});
+
+deadlines.push({venue: "<a href=http://iccv2017.thecvf.com>ICCV 2017, Venice, Italy</a>", area: "Computer Vision", deadline: new Date(2017, 2, 17, 23, 59, 0, 0)});
+
+deadlines.push({venue: "<a href=http://www.acmmm.org/2017>ACMMM 2017, San Francisco, USA</a>", area: "Computer Vision", deadline: new Date(2017, 2, 31, 23, 59, 0, 0)});
+// Display function, called every second or so
+function refreshDisplay() {
+    
+    var d= new Date();
+    $("#currtime").text("Current time: " + timeDescription(d));
+    
+    // calculate and display deadlines
+    for(var i=0;i<deadlines.length;i++) {
+      var dl= deadlines[i];
+      var timeLeft= new Date(dl.deadline.getTime() - d.getTime());
+
+      warningString= "";
+      if("approx" in dl) { warningString= "based on previous year!"; }
+      
+      $("#deadline" + i).html(
+        "<div class=\"tld\">" + timeLeftDescription(timeLeft) + "</div>"
+      + "<div class=\"vd\">" + dl.venue + "</div>"
+      + "<div class=\"ad\">" + dl.area + "</div>"
+      + "<div class=\"td\"> Deadline: " + timeDescription(dl.deadline) + "</div>"
+      + "<div class=\"wd\">" + warningString + "</div>"
+      );
+    }
+    
+    if(backi !== -1) {
+      var dl= deadlines[backi];
+      var timeLeft= new Date(dl.deadline.getTime() - d.getTime());
+      $("#backfacetext").html(
+        dl.venue + "</br>"
+        + timeLeftDescription(timeLeft)
+        );
+    }
+    
+}
+
+// int main(){}
+$(document).ready(function() {
+  var d= new Date();
+    var deadlines2= new Array();
+    for(var i=0;i<deadlines.length;i++) {
+      var dl= deadlines[i];
+      var timeLeft= new Date(dl.deadline.getTime() - d.getTime());
+      var t = timeLeft.getTime();
+      if(t>=0) deadlines2.push(deadlines[i]);
+    }
+    deadlines = deadlines2;
+  for(var i=0;i<deadlines.length;i++) {
+    var dl= deadlines[i];
+    $("<div class=dd id=deadline" + i + "></div>").appendTo("div#deadlinesdiv");
+
+    if (i<deadlines.length-1){
+      var nextdl = deadlines[i+1];
+      var timeLeft= new Date(nextdl.deadline.getTime() - dl.deadline.getTime());
+      var descr = timeLeftDescription(timeLeft);     
+      $("<center><div class=betc id=bet" + i + ">" + descr + " before the next deadline!</div></center>").appendTo("div#deadlinesdiv");
+    }
+
+    var divid= "#deadline" + i;
+    
+    $(divid).hide();
+    $(divid).fadeIn(200*(i+1), function() { }); // create a nice fade in effect
+    
+    
+    $(divid).click(function(z) { // Fade in backface and make a giant timer for this event on click
+      // self-executing function hackery :)
+      return function() {
+        backi= z;
+        $("#backface").fadeIn("slow"); // fade in white stuff
+      }
+    }(i));
+    
+    
+  }
+ 
+  // set up deadline timer to redraw
+  setInterval(
+    function(){ refreshDisplay(); },
+    1000
+  );
+  
+  $("#backface").click(function() {
+    backi = -1;
+    $("#backface").fadeOut("slow");
+  });
+  
+  // draw!
+  refreshDisplay();
+
+});
+
+</script>
+
+
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./index.html" class="navbar-brand">Home</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="./people.html" class="navbar-brand">People</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="./research.html" class="navbar-brand">Research</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="./publications.html" class="navbar-brand">Publications</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="./contact.html" class="navbar-brand">Contact</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="./openings.html" class="navbar-brand">Openings</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="./prospective.html" class="navbar-brand"><font color=yellow><b>For-Prospective-Students</b></font></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+
+      </div>
+    </div>
+
+
+<style type="text/css">
+
+/* Some resetting */
+body {
+  /*font-family: Verdana, Helvetica, sans-serif;*/
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  color: #222;
+}
+
+/* Main content div */
+#surround{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 600px;
+  background-color: white;
+}
+
+/* Div that contains all deadlines */
+#deadlinesdiv {
+}
+
+#currtime{
+  font-size: 14px;
+  text-align: center;
+}
+#bottompart{
+  text-align: center;
+}
+
+/* Page title */
+h1{
+  /*display: inline;*/
+  /*margin-right: 10px;*/
+  /*font-size: 35px;*/
+}
+
+/* Maintained by @karpathy */
+#signature {
+  /*position: absolute;*/
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 25px;
+  font-size: 14px;
+  
+}
+
+/* The cells that contain each deadline */
+.dd{
+  padding: 10px;
+  margin-bottom: 3px;  
+  background-color: #EEE;
+  border: 1px solid #DDD;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+.dd:hover{
+  background-color: #DDD;
+  border: 1px solid #AAA;
+}
+/* Time left description div */
+.tld {
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.betc{
+  /*padding: 10px;*/
+  margin-bottom: 3px;  
+  background-color: rgba(238, 238, 238, 0.26);
+  /*border: 1px solid #DDD;*/
+  cursor: default;
+  position: relative;
+  width: 50%;
+  border-radius: 5px;
+}
+/* Area description div */
+.ad {
+  /*font-family: monospace;*/
+}
+
+/* Time description div */
+.td {
+}
+
+/* Venue description div */
+.vd {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Warning div */
+.wd {
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  color: #700;
+  font-size: 10px;
+}
+
+#backface {
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: white;
+  display: none;
+  z-index: 888;
+}
+#backfacetext {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 28px;
+  color: #555;
+  font-weight: bold;
+  z-index: 889;
+}
+#musiclink a{
+  color: #AAA;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+body{
+  text-align: left;
+}
+</style>
+
+<style type="text/css"></style>
+    <div class="container">
+    <div id="wrap" style="text-align:left;">
+
+      <div id="header" style="text-align:center;">
+
+                <div class="logo">   
+                <h1>Academic Countdown</h1>
+                </div><!--end logo-->
+
+            </div>
+<div id="dic_bubble" class="selection_bubble" style="z-index:9999;" fetching="false"></div><div id="backface"><div id="backfacetext"></div></div>
+
+<div id="surround">
+  <div id="currtime"></div>
+  <br>
+  <div id="deadlinesdiv">
+  </div>
+  <br>
+</div>
+
+<div id="footer"> 
+  <div class="footer-line"></div> 
+  <p>Adopted from <a href="http://www.shafaei.net">Alireza Shafai</a></p> 
+</div><!--end footer--> 
+
+
+      </div>      
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">            
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootswatch.js"></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>

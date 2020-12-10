@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Video Analytics Lab, SERC, IISc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./index.html" class="navbar-brand">Home</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="./people.html" class="navbar-brand">People</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="./research.html" class="navbar-brand">Research</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="./publications.html" class="navbar-brand">Publications</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="./contact.html" class="navbar-brand">Contact</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="./openings.html" class="navbar-brand"><font color=yellow>Openings</font></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+        <div class="navbar-header">
+          <a href="./press.html" class="navbar-brand">Press Coverage</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+	<div class="navbar-header">
+          <a href="./prospective.html" class="navbar-brand"><font color=yellow><b>For-Prospective-Students</b></font></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div>
+            <h1>People</h1>
+		<h2> Convenor </h2>
+		<div class="media">
+    <span class="media-left">
+        <img width=150 src="./babu2small.jpg" alt="...">
+    </span>
+    <div class="media-body">
+	    		<p class="lead"> <a href="http://cds.iisc.ac.in/faculty/venky/"><b>Venkatesh Babu</b></a> received his Ph.D degree from <a href="http://www.ee.iisc.ac.in">Dept. of Electrical Engineering</a>, <a href="http://www.iisc.ac.in/">Indian Institute of Science, Bangalore</a>. Thereafter, he held postdoctoral positions at  <a href="http://www.ntnu.edu/">NTNU, Norway</a> and <a href="https://www.irisa.fr/en">IRISA/INRIA, Rennes, France</a>, through ERCIM fellowship. Subsequently, he worked as a research fellow at <a href="http://www.ntu.edu.sg/Pages/home.aspx">NTU, Singapore</a>. He spent couple of years working in industry before returning back to the institute in August 2010. He is currently an Associate Professor at CDS, IISc</p>
+    </div>
+</div>
+<h4 style="text-align: left;"><big><big>Current Students :</big></big></h4>
+<h5 style="text-align: left;"><big><big>PhD</big></big></h5>
+<ol>
+  <li><big><a href="https://sites.google.com/view/kramprabhakar/">                                           Ram Prabhakar K.    </a> (Joined - Aug. 2014)</big></li>
+  <li><big><a href="https://dblp.uni-trier.de/pers/hd/s/Sam:Deepak_Babu">                                           Deepak Babu Sam     </a> (Joined - Jan. 2016)</big></li>
+<!--  <li><big><a href="http://nithishdivakar.github.io">            Nithish Divakar     </a> (Since - Aug. 2016)</big></li>-->
+  <li><big><a href="https://sites.google.com/view/jogendra/">                                           Jogendra Nath Kundu </a> (Joined - Aug. 2016)</big></li>
+  <li><big><a href="https://www.linkedin.com/in/sravanti-addepalli/">                                           Sravanti Addepalli  </a> (Joined - Aug. 2018)</big></li>
+  <li><big><a href="https://www.linkedin.com/in/harsh-rangwani/"> Harsh Rangwani</a> (Joined - Aug. 2019) </big></li>
+  <li><big><a href="https://www.linkedin.com/in/pkumar7618/"> Prabhat Kumar</a> (Joined - Aug. 2019) </big></li>
+<!--  <li><big><a href="https://www.linkedin.com/in/ansu-mathew-74186a73/">                                           Ansu Mathew  </a> (Joined - Aug. 2018)</big></li>-->
+</ol>
+
+<h5 style="text-align: left;"><big><big>Masters</big></big></h5>
+<ol>
+<li><big> <a href="https://www.linkedin.com/in/tejank10/?originalSubdomain=in"> Tejan Karmali </a> (M.Tech (Res), Joined - Aug. 2019) </big></li>
+<li><big> <a href="https://www.linkedin.com/in/govind-waghmare/"> Govind Waghmare </a> (M.Tech, Joined - Aug. 2018) </big></li>
+<li><big> <a href="https://www.linkedin.com/in/arya-baburaj-2476a8139/"> Arya Baburaj </a> (M.Tech, Joined - Aug. 2018) </big></li>
+
+</ol>
+
+<h5 style="text-align: left;"><big><big>Project Assistants</big></big></h5>
+<ol>
+<li><big><a href="https://www.linkedin.com/in/rakesh-mugalodi-179476191/">   Rakesh Mugalodi       </a>(BITS Pilani, May. 2019 - )</big></li>
+<li><big><a href="http://naveenvenkat.com"> Naveen Venkat </a> (BITS Pilani, Jun. 2019 -)</big></li>
+<li><big><a href="https://www.linkedin.com/in/ambareeshr/?originalSubdomain=in"> Ambareesh Revanur </a> (RVCE, Jul. 2019 -)</big></li>
+<li><big><a href="https://www.linkedin.com/in/jimmy-joseph-475ba05a/"> Jimmy Joseph </a> (CoE Trivandrum, Oct. 2019 -)  </big></li>
+<li><big> Abhinav Agarwalla (IIT Kharagpur, Jan. 2020 -) </big></li>
+																																																																																																																																																																																																																																																																																																																																																																																									<li><big><a href="https://www.linkedin.com/in/nihar-ranjan-sahoo-nrs26/"> Nihar Ranjan Sahoo</a> (IISc Bangalore, Jan. 2020 -) </big></li>
+</ol>
+<h5 style="text-align: left;"><big><big>Interns</big></big></h5>
+<ol>
+</ol>
+
+<h4 style="text-align: left;"><big><big>Past :</big></big></h4>
+<ol>
+<li><big><a href="https://www.linkedin.com/in/rajat-arora-1638b275/">   Rajat Arora        </a>(Proj. Asst., Oct., 2018-Sep. 2019)</big></li>
+<li><big><a href="https://scholar.google.co.in/citations?user=AVLSxKMAAAAJ&hl=en"> Jay Patravali</a> (Proj. Asst., now MS Student at Oregon State University)</big></li>
+  <li><big><a href="">         Vivek B. S.      </a>(M.Sc (Engg), Aug. 2016 - Jul. 2019)</big></li>
+  <li><big><a href="https://www.linkedin.com/in/navaneetkl/">         Navaneet K.L.      </a>(M.Sc (Engg), Aug. 2016 - Jul 2019) PhD student at UMBC</big></li>
+  <li><big><a href="https://sites.google.com/view/abinaya-k/">         Abinaya K.      </a>(M.Tech, Aug. 2017-Jun 2019) Flipkart</big></li>
+<li><big><a href="http://jaypatravali.github.io">   Jay Patravalli        </a>(VIT, Dec., 2018 - May 2019)</big></li>
+<li><big><a href="https://www.linkedin.com/in/rahul-venkatesh-64b27380/">   Rahul Venkatesh        </a>(Proj. Asst.,  Jul., 2018 - Jun. 2019) MS student at CMU</big></li>
+<li><big><a href="https://pvskand.github.io/">   Skand Vishwanath Peri        </a>(Proj. Asst.,  Sep., 2018-Apr. 2019) Proj. Asst. at Rutgers</big></li>
+<li><big><a href="https://priyankamandikal.github.io/">   Priyanka Mandikal        </a>(Proj. Asst., Aug, 2017-Mar. 2019) PhD student at University of  Texas, Austin</big></li>
+<li><big><a href="https://www.linkedin.com/in/maharshigor/">   Maharshi Gor        </a>(Proj. Asst., Jan., 2018-Jan, 2019) Google AI, New York</big></li>
+<li><big><a href="https://www.linkedin.com/in/vaisakh-shaj-80ba9b49/">   Vaisakh Shaj        </a>(Proj. Asst., Sep., 2018-Dec. 2018) PhD student at Uni. Lincoln, UK</big></li>
+<li><big><a href="https://www.linkedin.com/in/aditya-ganeshan-68341bb9/">   Aditya Ganeshan        </a>(Proj. Asst., Jul, 2017-Nov. 2018) now at Preferred Networks, Japan.</big></li>
+<li><big><a href="https://www.linkedin.com/in/amoghkamath/">   Amogh Kamath        </a>(Proj. Asst, Apr., 2018 - Nov. 2018)</big></li>
+  <li><big><a href="https://sites.google.com/site/kreddymopuri/">Konda Reddy Mopuri  </a> (PhD, Aug. 2012 - Jul. 2018) now Post-Doc at Uni. Edinburgh, UK.</big></li>
+  <li><big><a href="https://www.linkedin.com/in/avishekmajumder/">         Avishek Majumder      </a>(M.Sc (Engg),  Aug. 2015 - Jul. 2018)</big></li>
+  <li><big><a href="https://ravika.github.io/">       Ravi Kiran S        </a> (PhD, Aug. 2014- Jan. 2018) [<i>IUPRAI Doctoral Dissertation Award 2017-18</i>] Now Asst. Prof. at IIIT Hyderabad.</big></li>
+<li><big><a href="https://www.linkedin.com/in/phani-krishna-uppala-02711885/">   Phani Krishna        </a>(Proj. Asst., Aug. 2017-Jul. 2018), Now at NAVER Corp., Korea. </big></li>
+<li><big><a href="https://www.linkedin.com/in/anujpahuja/">   Anuj Pahuja        </a>(Proj. Asst., Oct. 2017-May 2018) now MS student at CMU</big></li>
+<li><big><a href="https://www.linkedin.com/in/neeraj-sajjan/">   Neeraj Sajjan        </a>(Proj. Asst., Sep., 2017-Mar., 2018), now MS student at CMU</big></li>
+  <li><big><a href="http://shivsurya.github.io/index.html">      Shiv Surya          </a>(March, 2016- Jul'17), now at Amazon</big></li>
+  <li><big><a href="http://surajsrinivas.wordpress.com">         Suraj Srinivas      </a>(M.Sc (Engg), Aug. 2014-17), PhD student at Idiap, Switzerland</big></li>
+  <li><big><a href="https://in.linkedin.com/in/snehansu-sekhar-sahu-iisc">Snehansu Sekhar Sahu </a>(M.Tech, 2015-2017)</big></li>
+  <li><big><a href="">                                           Rakesh Kumar Mallick</a>(M.Tech, - 2015-2017)</big></li>
+  <li><big><a href="">                                           Srinivas Kumar      </a>(M.Tech, - 2015-2017), Capital One</big></li>
+  <li><big><a href="">                                           Varun Akshay        </a>((Proj. Asst) - July, 2016-May, 17), PhD student at UMBC</big></li>
+  <li><big><a href="http://sites.google.com/site/ishtdwivedi">   Isht Dwivedi        </a>((Proj. Asst) - Aug, 2016-May 17), now Masters student at Columbia University</big></li>
+  <li><big><a href="">   Abhijat Biswas        </a>((Proj. Asst) - Oct., 2016-Apr. 17), now Masters student at CMU</big></li>
+  <li><big><a href="">   Jayasimha Talur        </a>((Proj. Asst) - Feb., 2017-Jun 17), now at Microsoft</big></li>
+  <li><big><a href="https://www.linkedin.com/in/srinivaskss/">    Srinivas Kruthiventi </a>(M.Sc (Engg), Aug. 2013-16), [<i>Subramanian Rajalakshmi Medal for the best M.Sc (Engg) thesis for the year 2016-17</i>] Now at Samsung-Harman</big></li>
+  <li><big><a href="https://www.linkedin.com/in/nikitapprabhu/"> Nikita Prabhu </a>(M.Sc (Engg), Aug. 2013-16), Now at Amazon</big></li>
+  <li><big>Nikhilesh</big><big>(M.Tech, 2014-2016)</big></li>
+  <li><big>Jaley Dholakiya (</big><big>M. Tech, 2013-2015), Harman</big></li>
+  <li><big><a href="http://boominathanlokesh.wordpress.com">Lokesh Boominathan</a>(Proj. Asst), Now Ph.D student at Rice University. </big></li>
+  <li><big><a href="http://nithishdivakar.github.io">Nithish Divakar</a> </big><big>(M. Tech, 2013-2015)</big></li>
+  <li><big><a href="https://sites.google.com/site/sourachakra/">Souradeep Chakraborty</a>(Proj. Asst),&nbsp; Ph.D. student at UCSB.</big></li>
+  <li><big>Sreekanth Raja (M. Tech, 2010),&nbsp; NPOL, DRDO, Cochin</big></li>
+  <li><big>Priti Parate (M. Tech, 2010),&nbsp; Dell, Bangalore</big></li>
+  <li><big>Rajendra Kumar (M. Tech 2010), AMD, Bangalore<br> </big></li>
+  <li><big>Naresh Kumar M. S. (Proj. Asst), M.S (UCSD)</big></li>
+  <li><big>Ashwini M. J. </big><big>(Proj. Asst), IBM, Bangalore<br> </big></li>
+  <li><big>Sanjeev K. (M. Tech, 2011)</big></li>
+  <li><big><a href="https://sites.google.com/site/kmanutom/">Manu Tom</a> (Proj. Asst) Ph.D student at ETH, Zurich, Switzerland</big></li>
+  <li><big>Suraj Vantigodi </big><big>(</big><big>Proj. Asst)</big><big>, Bosch, Bangalore<br> </big></li>
+  <li><big>Gnana Praveen (</big><big>Proj. Asst), Samsung, Bangalore.</big></li> </big></li>
+  <li><big>Aniruddha Acharya (M. Tech, 2012), Microsoft</big></li>
+  <li><big>Jayasimha Talur </big><big>(M. Tech, 2012), PA at VAL </big> </li>
+  <li><big><a href="https://www.linkedin.com/in/savinashr/"> S. Avinash Ramakanth </a> (M.Sc, 2011-2014),  [<i>Subramanian Rajalakshmi Medal for the best M.Sc (Engg) thesis for the year 2014-15</i>], Now at InMobi, Bangalore.</big></li>
+  <li><big>Nirmal Jith </big><big>(</big><big>Proj. Asst), Aindra Systems, Bangalore.</big></li>
+  <li><big><a href="https://sites.google.com/site/sovan1987">Sovan Biswas</a> (M.Sc (Engg), 2011-2014), Ph.D student at University of Bonn, Germany.<br>
+    </big></li>
+</ol>
+<h4 style="text-align: left;"><big><big>Interns (Past) :</big></big></h4>
+<ol>
+<li><big> Adit Deshmukh (BITS Goa) </big></li>
+<li><big> Shreesh Keskar (BITS Goa) </big></li>
+<li><big> Siddhinita Wandekar (BITS Goa) </big></li>
+<li><big> Anirudh Gururaj (BMSCE) </big></li>
+<li><big> Himanshu Buckchash (IIT Roorkee) </big></li>
+<li><big> Ashish Mittal (IIT Bombay)</big></li>
+<li><big> Balraj Ashwath (NIT Surathkal)</big></li>
+<li><big> Anush Kumar (MIT Manipal)</big></li>
+<li><big> Kunal Pratap Singh (IIT Roorkee)</big></li>
+<li><big> Sashank Kashyap (IIT Roorkee)</big></li>
+<li><big> Naveen Venkat, (BITS Pilani, Jan., 2019)</big></li>
+<li><big>  Rahul Chand, (BITS Pilani, Jan., 2019-May 2019)</big></li>
+<li><big><a href="http://jaypatravali.github.io">   Jay Patravalli        </a>(VIT, Sep.-Nov., 2018)</big></li>
+<li><big><a href="">   Rahul Venkatesh        </a>(RVCE,  Jan-Jun., 2018)</big></li>
+<li><big><a href="">   Mayank Agarwal        </a>(BITS,  Jan-Jun., 2018)</big></li>
+<li><big><a href="">   Kirnesh Nandan        </a>(IIT-R,  Jan-Apr., 2018)</big></li>
+<li><big><a href="http://utsavgarg.github.io/">Utsav Garg</a> (NTU, Singapore, Aug., 2016 - Jun 17)</big></li>
+<li><big><a href="">   Aditya Ganeshan        </a>(IIT-R,  Jan-Jun., 2017)</big></li>
+  <li><big>Skand, (Intern, 2017), IIT, Ropar</big></li>
+  <li><big>Srikar Y M, (Intern, 2017), IIT, Hyderabad</big></li>
+  <li><big>Utkarsh Ojha (Intern, 2017), </big><big>MNNIT, Allahabad</big></li>
+  <li><big>Swetha V C (Intern, 2017), </big><big>IIST, Trivandrum</big></li>
+  <li><big>Prerit Gupta (Intern, 2017), </big><big>IIT, Kharagpur</big></li>
+  <li><big>Ashutosh Adhikari (Intern, 2017), DAIICT, Gandhinagar</big></li>
+  <li><big>Trisha Mittal (Intern, 2016), IIIT-Bangalore</big></li>
+  <li><big>Harsh Agarwal (Intern, 2016), IIT-BHU, Varanasi</big></li>
+  <li><big>G. Swaminathan (Intern, 2016), IIT-BHU, Varanasi</big></li>
+  <li><big>Hrishikesh Vaidya (Intern, 2016), IIT, Hyderabad</big></li>
+  <li><big>Ravi Sundaram (Intern, 2016), NIT, Trichy</big></li>
+  <li><big>Hrishikesh Vaidya (Intern, 2016), IIT, Hyderabad</big></li>
+  <li><big>V Sai Srikar (Intern, 2016), IIT, Hyderabad</big></li>
+  <li><big>Sahil Manocha (Intern, 2016), IIT, Hyderabad</big></li>
+  <li><big>Priyanka Bedarkar (BITS-Goa), (June - Dec. 2016)</big></li>
+  <li><big>Vishal Athreya  (BITS-Hyderabad) , (June - Dec. 2016)</big></li>
+  <li><big>Kumar Ayush (Intern, 2015), IIT, Kharagpur</big></li>
+  <li><big>V. Shanthakumar (Intern, 2015), IIT, Hyderabad</big></li>
+  <li><big>Hriday Samboju (Intern, 2015), IIT, Hyderabad</big></li>
+  <li><big>Sudharshan Suresh (Intern, 2015), NIT, Trichy</big></li>
+  <li><big>Meenakshi Naidu (Intern, 2015), NIT, Trichy</big></li>
+  <li><big>Kumaresh Krishnan (Intern, 2015), IIIT, Bangalore</big></li>
+  <li><big>Nagarathna Nayak (Intern, 2015), PESIT, Bangalore</big></li>
+  <li><big>Sai Srivatsa (Intern, 2014), IIT, Kharagpur</big></li>
+  <li><big>Chintak Sheth (Intern 2014), BITS, Goa</big></li>
+  <li><big>Aishwarya Gunaputi (Intern, 2014), NIT, Surathkal</big></li>
+  <li><big>Shahil Arora (</big><big>Intern, 2013), IIT, Kharagpur </big></li>
+  <li><big>Bhuvnesh Agarwal (Intern, 2011), </big><big>IIT, Kharagpur</big></li>
+  <li><big>Vennila Megavannan (Intern, 2011), Hewlett-Packard, Bangalore<br> </big></li>
+  <li><big>Sudarshan S. (Intern, 2012), IIT, Hyderabad</big></li>
+  <li><big>Avinash Ruchandani (Intern, 2012), IIT, Kharagpur <br> </big></li>
+</ol>
+<br>
+
+	    <div><h4> Teacher's Day (5 Sep. 2019)</h4><img src="./Sep5_2019.jpg" style="max-width:100%;" />
+          </div>          
+        </div>
+      </div>      
+	<br>
+	<br>
+	    <div><h4>Reddy's Farewell at 1947 Restaurant (25 Oct. 2018)</h4><img src="./Reddy_1947crop1.jpg" style="max-width:100%;" />
+          </div>          
+        </div>
+      </div>      
+	<br>
+	<br>
+	    <div><h4>Pic of VAL members (August 2014)</h4><img src="./VAL_Members1_Aug14.jpg" style="max-width:100%;" />
+          </div>          
+        </div>
+      </div>      
+	<br>
+	<br>
+
+    </div>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">            
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootswatch.js"></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
