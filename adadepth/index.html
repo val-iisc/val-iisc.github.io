@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Video Analytics Lab, CDS, IISc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../valweb/index.html" class="navbar-brand">Home</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="../valweb/people.html" class="navbar-brand">People</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="../valweb/research.html" class="navbar-brand">Research</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+		<div class="navbar-header">
+          <a href="../valweb/publications.html" class="navbar-brand">Publications</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="../valweb/contact.html" class="navbar-brand">Contact</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+	<div class="navbar-header">
+          <a href="../valweb/openings.html" class="navbar-brand">Openings</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+
+       <!-- Do not touch anything above this line -->
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div>
+	 <br>
+	 <br>
+	 <br>
+         <h1  align="center"> AdaDepth: Unsupervised Content Congruent Adaptation <br/>for Depth Estimation.</h1>
+         <center><h3> 
+         	<a href="https://scholar.google.co.in/citations?user=Xa44GDEAAAAJ&hl=en">J Kundu</a><sup>∗</sup>, 
+         	<a href="http://krishnacodes.github.io">P K Uppala</a> <sup>∗</sup>, 
+         A Pahuja,
+         <a href="http://cds.iisc.ac.in/faculty/venky/">R. V Babu</a></h3> 
+         <h4> Video Analytics Lab, CDS </h4>
+         <h4> Indian Institute of Science, Bangalore </h4> </center>
+	 <br>
+	 <br>
+         
+<!-- 	 <ol>
+		<big>
+		<li> <a href="#pdf">PDF</a></li>
+		<li> <a href="#wc">Abstract </a></li>
+                <li> <a href="#code">Code</a> </li>
+		</big>
+	 </ol> -->
+         
+	 <br>
+	 <br>
+
+	 <br>
+
+
+	 <h2 id="pdf"> Paper </h2>
+	 <ul>
+		<li><a href="https://arxiv.org/pdf/1803.01599.pdf">arXiv</a></li> 
+	 	<li><a href="./files/AdaDepth_CVPR18.pdf">PDF</a></li>
+	 <br>
+	 <br>
+
+	 <br>
+	 <center><img src="./files/AdaDepth_overlay.gif" widt="877" height="237"> </img></center>
+	 <br>
+	 <br>
+
+
+
+     <h2 id="wc"> Abstract </h2>
+	<p style="text-align:justify"> Recent advances in deep learning relies heavily on availability of huge amount of clean annotated information involving substantial manual effort. This becomes a major challenge for tasks related to an entire scene understanding in contrast to a simple object classification task. Researchers are focusing on efficient techniques to use already available synthetic data from various 3D game engines for training artificial vision systems. But, the key question is: how can we adapt such systems for natural scenes with minimal supervision? In a recent study by Prof. Venkatesh Babu and his team from Video Analytics Lab, Department of Computational and Data Sciences, have proposed a novel adversarial learning approach to efficiently adapt synthetically trained models for real scene images. The proposed adaptation method can be used to disentangle the domain discrepancy for improved performance on real scenes from the deployed environment in an unsupervised manner. Currently, the focus is on the task of depth estimation from monocular RGB image scene. But the approach can be extended to other scene understanding problems as well. The method uses an efficient content consistency regularization along with an adversarial learning objective function to train the base Convolutional Neural Network (CNN) architecture. Moreover, the proposed regularization helps to efficiently maintain the spatial dependency of deep features with respect to the given input during the adaptation process. This work will be presented at this year’s CVPR conference.
+         </p>
+	 <br>
+
+	 <br>
+	 <h2 id="wc"> Datasets </h2>
+	<p style="text-align:justify"> Our Model is trained on the synthetic data and adapted to the real data.
+	<ul>
+		<li><h4>Synthetic datasets </h4></li> 
+		<ul>
+			<li><a href="http://pbrs.cs.princeton.edu/">PBRS</a></li>
+			<li><a href="http://www.europe.naverlabs.com/Research/Computer-Vision/Proxy-Virtual-Worlds">Vitual Kitti</a></li>
+		</ul>
+		<li><h4>Real datasets </h4> </li>
+		<ul>
+			<li><a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html">NYUD V2</a></li>
+			<li><a href="http://www.cvlibs.net/datasets/kitti/index.php">Kitti</a></li>
+		</ul>
+	</ul>
+	</p>
+    <h2 id="wc"> Code </h2>
+    <ul>
+	<li><a href="https://drive.google.com/file/d/1jL2I5BFQXQYFvuM7BI2Bs3_ciTfGehyZ/view?usp=sharing">Code</a></li>
+    </ul>
+		<!--Download the code for training and evaluation of SCNN crowd counting model <a href="https://github.com/val-iisc/crowd-counting-scnn"> HERE </a> -->
+     <br>
+     <br>
+
+	 <h2 id="pdf"> News Coverage </h2>
+	 <ul>
+	 <li><a href="https://www.iisc.ac.in/adadepth/">IISc Article</a></li> 
+	 <!-- <li><a href="https://krishnacodes.github.io/blog/adadepth/">Blog</a></li> -->
+	 </ul>
+	 <br>
+	 <br>
+
+	<h2 id="wc"> Reference </h2>
+
+	<pre class="col-md-9 col-md-offset-2">@InProceedings{Kundu_2018_CVPR,
+		author = {Nath Kundu, Jogendra and Krishna Uppala, Phani and Pahuja, Anuj and Venkatesh Babu, R.},
+		title = {AdaDepth: Unsupervised Content Congruent Adaptation for Depth Estimation},
+		booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+		month = {June},
+		year = {2018}
+		}</pre>
+     <hr>
+
+       <!-- Do not touch anything below this line -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">            
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootswatch.js"></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
