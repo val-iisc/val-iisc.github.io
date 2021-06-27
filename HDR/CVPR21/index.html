@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Video Analytics Lab, CDS, IISc</title>
+    <title>Video Analytics Lab, SERC, IISc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="./bootstrap.css" media="screen">
@@ -32,7 +33,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="./index.html" class="navbar-brand">Home</a>
+          <a href="./../../index.html" class="navbar-brand">Home</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -40,7 +41,7 @@
           </button>                
         </div>
 		<div class="navbar-header">
-          <a href="./people.html" class="navbar-brand">People</a>
+          <a href="./../../people.html" class="navbar-brand">People</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -48,7 +49,7 @@
           </button>                
         </div>
 		<div class="navbar-header">
-          <a href="./research.html" class="navbar-brand">Research</a>
+          <a href="./../../research.html" class="navbar-brand">Research</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -56,7 +57,7 @@
           </button>                
         </div>
 		<div class="navbar-header">
-          <a href="./publications.html" class="navbar-brand">Publications</a>
+          <a href="./../../publications.html" class="navbar-brand">Publications</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -64,7 +65,7 @@
           </button>                
         </div>
 	<div class="navbar-header">
-          <a href="./contact.html" class="navbar-brand">Contact</a>
+          <a href="./../../contact.html" class="navbar-brand">Contact</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -72,31 +73,7 @@
           </button>                
         </div>
 	<div class="navbar-header">
-          <a href="./openings.html" class="navbar-brand"><font color=yellow>Openings</font></a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>                
-        </div>
-        <div class="navbar-header">
-          <a href="./press.html" class="navbar-brand">Press Coverage</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-	<div class="navbar-header">
-          <a href="./prospective.html" class="navbar-brand"><font color=yellow><b>For-Prospective-Students</b></font></a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>                
-        </div>
-        <div class="navbar-header">
-          <a href="./funding.html" class="navbar-brand">Funding</a>
+          <a href="./../../openings.html" class="navbar-brand">Openings</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -110,24 +87,73 @@
 
     <div class="container">
 
+       <!-- Do not touch anything above this line -->
       <div class="page-header" id="banner">
         <div class="row">
           <div>
-            <h1>Contact</h1>
-		<h2> <b> R. Venkatesh Babu </b> </h2>
-		<h3> Professor </h3>
-                <p class="lead"><a href="http://cds.iisc.ac.in">Department of Computational and Data Sciences (CDS)</a><br>
-		<a href="http://www.iisc.ac.in/">Indian Institute of Science</a><br>
-		Bangalore, INDIA - 560012<br><br>
-		Tel: (+91)-80 22932900 <br> 
-		Fax:(+91)-80 23602648 <br>
-		Email: <tt>venky@iisc.ac.in</tt> </p>
+	 <br>
+	 <br>
+	 <br>
+         <!--p class="lead"> High Dynamic Range Deghosting Dataset <b></b></a>  -->
+         <center><h1> Labeled from Unlabeled: Exploiting Unlabeled Data for Few-shot Deep HDR Deghosting </h1>
+         <center><h3> K Ram Prabhakar<sup>1</sup>, Gowtham Senthil<sup>1,2</sup>*, Susmit Agrawal<sup>1</sup>*, R. Venkatesh Babu<sup>1</sup>, and Ramakrishna SS Gorthi<sup>2</sup></h3>         
+         <h4> <sup>1</sup>Video Analytics Lab, CDS, Indian Institute of Science, Bangalore  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <sup>2</sup>Indian Institute of Technology, Tirupati</h4> </center>
+	 <br>
+
+         <h2 id="wc"> Abstract </h2>
+         <p style="text-align: justify; text-justify: inter-word"> High Dynamic Range (HDR) deghosting is an indispensable tool in capturing wide dynamic range scenes without ghosting artifacts. Recently, convolutional neural networks (CNNs) have shown tremendous success in HDR deghosting. However, CNN-based HDR deghosting methods require collecting large datasets with ground truth, which is a tedious and time-consuming process. This paper proposes a pioneering work by introducing zero and few-shot learning strategies for data-efficient HDR deghosting. Our approach consists of two stages of training. In stage one, we train the model with few labeled (5 or less) dynamic samples and a pool of unlabeled samples with a self-supervised loss. We use the trained model to predict HDRs for the unlabeled samples. To derive data for the next stage of training, we propose a novel method for generating corresponding dynamic inputs from the predicted HDRs of unlabeled data. The generated artificial dynamic inputs and predicted HDRs are used as paired labeled data. In stage two, we finetune the model with the original few labeled data and artificially generated labeled data. Our few-shot approach outperforms many fully-supervised methods in two publicly available datasets, using as little as five labeled dynamic samples.</p>	 <br>
+          <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div>
+            
+         <!--p class="lead"> <b>Distribution of median epitome scores across categories and sketch stroke orderings </b></a>.  -->       
+   <!--p class="lead"><a href="http://www.serc.iisc.in">Supercomputer Education and Research Center</a>, <a href="http://www.iisc.ernet.in/">Indian Institute of Science</a></p-->
           </div>          
-	  <div align=center>
-	  <img width=300 src="vallogo.jpg"></img>
-	  </div>
         </div>
-      </div>      
+      </div> 
+         
+         <!-- <br>
+         <h2 id="results"> Results </h2>
+	 <div style="max-width: 1000px"><img width=40% height=40% src="./crowd4.PNG" style="max-width:100%;" /></div>
+         <br>
+ Quantitative results of our approach along with other state-of-the-art methods on UCF_CC_50 Dataset.
+	
+	<br>
+        <br>
+        <br>
+	<br>
+        <div style="max-width: 1000px"><img width=100% height=100% src="./crowd2_mod.png" style="max-width:100%;" /></div>
+         <br>
+Crowd images with head annotations marked using red dots and their corresponding estimated crowd density maps.
+
+
+	<br>
+        <br>
+        <br>
+	<br>
+        <div style="max-width: 1000px"><img width=60% height=60% src="./crowd3.png" style="max-width:100%;" /></div>
+         <br> 
+    Dataset details -->
+          </div>          
+        </div>
+      </div> 
+
+	<br>
+      <h3> <a href="https://val.cds.iisc.ac.in/HDR/CVPR21/">Download Code</a> </h3>
+      <h2> Citation </h2>
+      <code>
+      @inproceedings{prabhakar2021,<br>
+  	  title={Labeled from Unlabeled: Exploiting Unlabeled Data for Few-shot Deep {HDR} Deghosting},<br>
+	    author={Prabhakar, K Ram and Senthil, Gowtham and Agrawal, Susmit and Babu, R Venkatesh and Gorthi, RKSS},<br>
+	    booktitle={Computer Vision and Pattern Recognition (CVPR)},<br>
+	    year={2021}<br>
+      }
+     </code>
+     <br>
+     <br>
+       <!-- Do not touch anything below this line -->
       <footer>
         <div class="row">
           <div class="col-lg-12">            
